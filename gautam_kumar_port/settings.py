@@ -25,7 +25,7 @@ SECRET_KEY = 'a1^7q%wu769mwz1wc7*jcr-6)g4w=ux%shkx4!=a)chh6t!bj+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gautam-kumar-port.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+     
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -113,7 +116,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

@@ -1,0 +1,1 @@
+web: gunicorn gautam_kumar_port.wsgi --log-file -
